@@ -3,8 +3,8 @@
 _Reality:_ repository consists of `js` and `json` files. Test files are collocated by `*.test.js` convention.  
 _Requirement:_ repo should have `*.js` and `*.json` files, but shouldnt have `*.test.js`.  
 _Problem:_  
-  a) with `--copy-files` flag `*.test.js` are transpiled and copied even though babel config has `ignore: [ '**/*.test.js' ]`.  
-  b) without `--copy-files` flag `*.json` files are left out and package breaks.  
+  * with `--copy-files` flag `*.test.js` are transpiled and copied even though babel config has `ignore: [ '**/*.test.js' ]`.  
+  * without `--copy-files` flag `*.json` files are left out and package breaks.  
 
 
 ```
