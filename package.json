@@ -1,0 +1,25 @@
+{
+  "name": "babel-ignore-bug-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "npm run build-copy && npm run build-notcopy",
+    "build-copy": "babel src -d dist/copy --copy-files",
+    "build-notcopy": "babel src -d dist/notcopy",
+    "postbuild": "treee dist && tree dist-expected",
+    "test": "node -r esm src/index.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "esm": "^3.0.34",
+    "rimraf": "^2.6.2",
+    "tree-node-cli": "^1.1.1"
+  }
+}
